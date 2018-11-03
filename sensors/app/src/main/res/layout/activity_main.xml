@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.kaist.cps.ubitap.chessclient.Main">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:id="@+id/phoneID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ID"
+                android:layout_width="100dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Phone ID" />
+
+            <EditText
+                android:id="@+id/IDE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:ems="10"
+                android:inputType="text"
+                android:text="BL" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/threshold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/thresholdT"
+                android:layout_width="100dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Threshold" />
+
+            <EditText
+                android:id="@+id/thresholdE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:ems="10"
+                android:inputType="number"
+                android:text="150" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hostName"
+                android:layout_width="100dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/samplingRate"
+                android:text="Host Name" />
+
+            <EditText
+                android:id="@+id/hostNameE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="192.168.0.4" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/hostPort"
+                android:layout_width="100dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Port No" />
+
+            <EditText
+                android:id="@+id/hostPortE"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:ems="10"
+                android:inputType="number"
+                android:text="3352" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/disConnect"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Disconnect" />
+            <Button
+                android:id="@+id/connect"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Connect" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/stopAudioStream"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Stop Stream" />
+
+            <Button
+                android:id="@+id/startAudioStream"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="Stream Audio" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:id="@+id/imageLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="146dp"
+                android:layout_height="158dp"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/transparent"
+                android:fadingEdge="horizontal"
+                android:layout_gravity="center"
+
+                app:srcCompat="@drawable/mic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
