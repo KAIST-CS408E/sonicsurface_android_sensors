@@ -20,6 +20,8 @@ import edu.kaist.cps.ubitap.chessclient.Main;
 import edu.kaist.cps.ubitap.chessclient.R;
 import edu.kaist.cps.ubitap.chessclient.Wrapper;
 
+import static edu.kaist.cps.ubitap.chessclient.Main.isVibrationTap;
+
 public class CircularQueue {
 
     int size;
@@ -58,7 +60,9 @@ public class CircularQueue {
         }
         else if(flag ) {
 
-            if(this.offsetCount == this.waitBlocks && this.cQueue.size() == this.size){
+            //remove isVibrationTap() in order to remove vibration check
+
+            if(this.offsetCount == this.waitBlocks && this.cQueue.size() == this.size && isVibrationTap()){
                 ArrayList<AudioChunk> dataBulk =new ArrayList<AudioChunk>( cQueue.subList(0,this.waitBlocks + 1));
 
                 byte[] b = new byte[0];

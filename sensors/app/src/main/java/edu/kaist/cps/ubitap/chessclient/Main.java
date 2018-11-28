@@ -63,7 +63,7 @@ public class Main extends AppCompatActivity implements SensorEventListener {
     private long currentTime = System.currentTimeMillis();
     private long lastUpdate = System.currentTimeMillis();
 
-    private boolean send = false;
+    private static boolean send = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -211,7 +211,7 @@ public class Main extends AppCompatActivity implements SensorEventListener {
                 public void run() {
                     send = false;
                 }
-            }, 10);
+            }, 1000);
 
             lastUpdate=currentTime;
         }
@@ -231,5 +231,9 @@ public class Main extends AppCompatActivity implements SensorEventListener {
     protected void onPause() {
         super.onPause();
         mSensorManager.unregisterListener(this);
+    }
+
+    public static boolean isVibrationTap(){
+        return send;
     }
 }
